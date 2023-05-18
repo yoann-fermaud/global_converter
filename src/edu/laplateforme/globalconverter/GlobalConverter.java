@@ -3,21 +3,13 @@ package edu.laplateforme.globalconverter;
 
 import edu.laplateforme.globalconverter.common.CommandLineOptionsHandler;
 
-public class Main {
+public class GlobalConverter {
     public static void main(String[] args) {
         if (1 < args.length) {
             CommandLineOptionsHandler.optionArg(args[0], args[1]);
         } else {
-            System.out.println("");
+            System.out.println("Invalid command line !");
+            System.out.println("$ java GlobalConverter [OPTION] YOUR_STRING");
         }
-
-        /*    1 2 4 8 16 32
-        * 24 - > 11000
-        * 0 / 12
-        * 0 / 6
-        * 0 / 3
-        * 1 / 2
-        * 1 / 1
-        * */
     }
 }
