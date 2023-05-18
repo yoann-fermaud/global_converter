@@ -23,4 +23,8 @@
 hs_err_pid*
 replay_pid*
 
-.idea
+# IntelliJ IDEA specific directory
+.idea/
+
+# IntelliJ IDEA project configuration file
+global_converter.iml
