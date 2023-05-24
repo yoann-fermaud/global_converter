@@ -67,11 +67,28 @@ public class ConversionsHandler {
             char hexadecimal0xF0 = hexadecimalSymbols[((int) character >> 4) & 0xF];
             char hexadecimal0x0F = hexadecimalSymbols[(int) character & 0xF];
 
-            //System.out.println(((int) character >> 4) & 0xF);
-            //System.out.println((int) character & 0xF);
+            this.STRING_BUILDER.append(hexadecimal0xF0);
+            this.STRING_BUILDER.append(hexadecimal0x0F);
 
-            STRING_BUILDER.append(hexadecimal0xF0);
-            STRING_BUILDER.append(hexadecimal0x0F);
+            if (i < string.length() - 1) {
+                this.STRING_BUILDER.append(" ");
+            }
+        }
+        return this.STRING_BUILDER;
+    }
+
+    public StringBuilder convertToOctal(String string) {
+        for (int i = 0; i < string.length(); i++) {
+            char character = string.charAt(i);
+
+            char[] octalSymbols = {'0', '1', '2', '3', '4', '5', '6', '7'};
+            char octal0xE0 = octalSymbols[((int) character >> 6) & 0x7];
+            char octal0x1C = octalSymbols[((int) character >> 3) & 0x7];
+            char octal0x07 = octalSymbols[(int) character & 0x7];
+
+            this.STRING_BUILDER.append(octal0xE0);
+            this.STRING_BUILDER.append(octal0x1C);
+            this.STRING_BUILDER.append(octal0x07);
 
             if (i < string.length() - 1) {
                 this.STRING_BUILDER.append(" ");
