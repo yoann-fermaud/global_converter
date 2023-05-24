@@ -18,7 +18,7 @@ public class CommandLineOptionsHandler {
                 break;
             case "-o":
             case "octal":
-                System.out.println("OPTION octal");
+                System.out.println(conversionsHandler.convertToOctal(string));
                 break;
             case "-t":
             case "text":
