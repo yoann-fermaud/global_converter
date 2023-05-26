@@ -22,7 +22,7 @@ public class CommandLineOptionsHandler {
                 break;
             case "-t":
             case "text":
-                System.out.println("OPTION text");
+                System.out.println(conversionsHandler.convertToText(string));
                 break;
             default:
                 System.out.println("Unknown option !");
